@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #012C23;
+  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  background-image: url("../img/backgroundWoman.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 64px 80px 0 80px;
+}
+
+.nav__logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFC5C1;
+}
+
+.nav__item {
+  margin: 0 20px;
+}
+
+.nav__item:hover {
+  border-bottom: 2px solid #FFC5C1;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.header__mainHeader {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 140px;
+  line-height: 100px;
+  text-align: center;
+  color: #FFC5C1;
+  margin: 140px auto 0 auto;
+}
+
+.header__paragraph {
+  width: 42.42%;
+  margin: 56px auto 0 auto;
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #A7C0BB;
+}
+
+.header__contactButton {
+  display: block;
+  margin: 24px auto 24px auto;
+  padding: 12px 52px;
+  background: #FFC5C1;
+  border-radius: 8px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #012C23;
+  text-transform: uppercase;
+}
+
+.ourServices {
+  background-color: #FFC5C1;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 140px 40px 0 40px;
+  padding: 120px 64px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ourServices__header {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 120px;
+  text-align: left;
+  color: #012C23;
+  -ms-flex-preferred-size: 58%;
+      flex-basis: 58%;
+}
+
+.ourServices__paragraph {
+  -ms-flex-preferred-size: 42%;
+      flex-basis: 42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #654C4A;
+}
+
+.ourServices__service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 21%;
+      flex-basis: 21%;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  margin-top: 120px;
+}
+
+.ourServices__icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.ourServices__serviceheader {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: #012C23;
+  width: 70%;
+  margin-top: 24px;
+}
+
+.ourServices__servicedescripton {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #654C4A;
+  margin-top: 8px;
+}
+
+.ourServices__readMoreButton {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #654C4A;
+  background: transparent;
+  border: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 24px;
+}
+
+.aboutMe__img {
+  margin-top: 80px;
+}
+
+.aboutMe__header {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 120px;
+  color: #FFC5C1;
+}
+
+.aboutMe__paragraph {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #A7C0BB;
+}
+
+.priceListContact {
+  margin: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.priceListContact__wrapper {
+  width: 50%;
+  padding: 120px 64px;
+}
+
+.priceListContact__wrapper--priceList {
+  background-color: #FFC5C1;
+  border-radius: 16px 0 0 16px;
+}
+
+.priceListContact__wrapper--kontakt {
+  background-color: #A7C0BB;
+  border-radius: 0 16px 16px 0;
+}
+
+.priceListContact__header {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 120px;
+  color: #012C23;
+}
+
+.priceListContact__paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 48px;
+  color: #012C23;
+}
+
+.priceListContact__span {
+  font-weight: bold;
+}
+
+.priceListContact__contactParagraph {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #012C23;
+  margin-top: 30px;
+}
+
+.priceListContact__contact {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: #012C23;
+  margin-top: 29px;
+}
+
+.priceListContact__contact:first-child {
+  margin-top: 47px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 48px 40px 100px 40px;
+}
+
+.footer__span {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFC5C1;
+  margin-left: 20px;
+}
+
+.footer__copyrights {
+  font-family: Titillium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+  color: #A7C0BB;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/*# sourceMappingURL=style.css.map */

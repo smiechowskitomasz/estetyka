@@ -1,0 +1,234 @@
+@import 'variables'
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap")
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap")
+*
+
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background-color: $greenColor
+  font-family: 'Titillium Web', sans-serif
+  font-family: 'Playfair Display', serif
+  font-style: normal
+  background-image: url("../img/backgroundWoman.png")
+  background-repeat: no-repeat
+  background-position: top right
+.wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+.nav
+  display: flex
+  flex-basis: 100%
+  margin: 64px 80px 0 80px
+  &__logo
+    flex-grow: 1
+  &__list
+    display: flex
+    align-items: center
+    list-style: none
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    text-align: center
+    color: $pinkColor
+
+  &__item
+    margin: 0 20px
+    &:hover
+      border-bottom: 2px solid $pinkColor
+.header
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex-basis: 100%
+  &__mainHeader
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 140px
+    line-height: 100px
+    text-align: center
+    color: $pinkColor
+    margin: 140px auto 0 auto
+  &__paragraph
+    width: 42.42%
+    margin: 56px auto 0 auto
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    text-align: center
+    color: $lightGreen
+  &__contactButton
+    display: block
+    margin: 24px auto 24px auto
+    padding: 12px 52px
+    background: $pinkColor
+    border-radius: 8px
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 32px
+    text-align: center
+    color: $greenColor
+    text-transform: uppercase
+.ourServices
+  background-color: $pinkColor
+  border-radius: 8px
+  display: flex
+  flex-wrap: wrap
+  margin: 140px 40px 0 40px
+  padding: 120px 64px
+  justify-content: space-between
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 120px
+    line-height: 120px
+    text-align: left
+    color: $greenColor
+
+    flex-basis: 58%
+  &__paragraph
+    flex-basis: 42%
+    display: flex
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    align-items: flex-end
+    color: $grayColor
+  &__service
+    display: flex
+    flex-direction: column
+    flex-basis: 21%
+    align-items: space-evenly
+    margin-top: 120px
+  &__icon
+    align-self: flex-start
+  &__serviceheader
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 40px
+    color: $greenColor
+    width: 70%
+    margin-top: 24px
+  &__servicedescripton
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 28px
+    color: $grayColor
+    margin-top: 8px
+  &__readMoreButton
+    font-family: Titillium
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 28px
+    text-decoration-line: underline
+    color: $grayColor
+    background: transparent
+    border: 0
+    align-self: flex-start
+    margin-top: 24px
+.aboutMe
+  &__img
+    margin-top: 80px
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 120px
+    line-height: 120px
+    color: $pinkColor
+  &__paragraph
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    color: $lightGreen
+.priceListContact
+  margin: 0 40px
+  display: flex
+  flex-basis: 100%
+  &__wrapper
+    width: 50%
+    padding: 120px 64px
+    &--priceList
+      background-color: $pinkColor
+      border-radius: 16px 0 0 16px
+    &--kontakt
+      background-color: $lightGreen
+      border-radius: 0 16px 16px 0
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 80px
+    line-height: 120px
+    color: $greenColor
+  &__paragraph
+    display: flex
+    justify-content: space-between
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 48px
+    color: $greenColor
+  &__span
+    font-weight: bold
+  &__contactParagraph
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    color: $greenColor
+    margin-top: 30px
+  &__contact
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 40px
+    color: #012C23
+    margin-top: 29px
+    &:first-child
+      margin-top: 47px
+.footer
+  display: flex
+  justify-content: flex-end
+  flex-basis: 100%
+  margin: 48px 40px 100px 40px
+  &__span
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    color: $pinkColor
+    margin-left: 20px
+  &__copyrights
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    text-align: right
+    color: $lightGreen
+    flex-grow: 1
