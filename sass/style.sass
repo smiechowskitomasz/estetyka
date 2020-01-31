@@ -169,7 +169,9 @@ body
     margin-top: 24px
 
   &__serviceheader--infoContainer
-    color: white
+    color: #ffffff
+    margin-top: 0
+    width: 100%
   &__servicedescripton
     font-family: Titillium
     font-style: normal
@@ -178,6 +180,9 @@ body
     line-height: 28px
     color: $grayColor
     margin-top: 8px
+  &__servicedescripton--infoContainer
+    color: $pinkColor
+    margin-top: 110px
 
   &__readMoreButton
     font-family: Titillium
@@ -193,9 +198,47 @@ body
     margin-top: 24px
     @media ( max-width: 640px )
       align-self: center
+  &__callButton
+    background-color: $pinkColor
+    padding: 12px
+    text-align: center
+    border-radius: 8px
+    margin-top: 10px
+
+  &__callNumber
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    color: $greenColor
+    font-size: 18px
+    line-height: 32px
+    text-decoration: none
+    padding: 12px 40px
+
 .aboutMe
+  flex-basis: 100%
+  display: flex
+  justify-content: space-between
+  position: relative
+  @media ( max-width: 640px  )
+    flex-direction: column
   &__img
+    flex-basis: 28.4%
     margin-top: 80px
+    margin-left: 66px
+    z-index: 2
+    @media ( max-width: 640px  )
+      margin: 0 auto
+  &__flexboxContainer
+    @media ( min-width: 640px ) 
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-self: center
+      align-items: center
+
+      flex-grow: 1
+
   &__header
     font-family: Playfair Display
     font-style: normal
@@ -203,6 +246,22 @@ body
     font-size: 120px
     line-height: 120px
     color: $pinkColor
+    margin-top: 192px
+    max-width: 600px
+    position: absolute
+    top: 220px
+    left: 440px
+    margin: 0
+    z-index: 1
+    @media ( max-width: 640px  )
+      position: relative
+      top: 0
+      left: 0
+      font-size: 48px
+      line-height: 46px
+      text-align: center
+      margin: 120px 40px 0 40px
+
   &__paragraph
     font-family: Titillium
     font-style: normal
@@ -210,6 +269,14 @@ body
     font-size: 20px
     line-height: 28px
     color: $lightGreen
+    margin-top: 480px
+    margin-bottom: 160px
+    max-width: 480px
+    @media ( max-width: 640px  )
+      font-size: 20px
+      line-height: 28px
+      text-align: center
+      margin: 28px 35px 80px 35px
 .priceListContact
   margin: 0 40px
   display: flex
@@ -255,6 +322,16 @@ body
     border-bottom: 1px solid #EBACA7
     &--noBorder
       border-bottom: 0
+  &__contactContainer
+    display: flex
+    margin-top: 29px
+    @media ( max-width: 640px )
+      flex-direction: column
+      align-items: center
+
+    &--changeMargin
+      margin-top: 49px
+
   &__span
     font-weight: bold
   &__contactParagraph
@@ -264,17 +341,21 @@ body
     font-size: 20px
     line-height: 28px
     color: $greenColor
-    margin-top: 30px
-  &__contact
+
+  &__contact, &__callNumber
     font-family: Playfair Display
     font-style: normal
     font-weight: bold
     font-size: 26px
     line-height: 40px
     color: #012C23
-    margin-top: 29px
-    &--changeMargin
-      margin-top: 47px
+    text-decoration: none
+    margin-left: 20px
+
+    @media ( max-width: 640px )
+      margin-left: 0
+      margin-top: 12px
+      margin-bottom: 32px
 
 .footer
   display: flex

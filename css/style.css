@@ -289,7 +289,9 @@ body {
 }
 
 .ourServices__serviceheader--infoContainer {
-  color: white;
+  color: #ffffff;
+  margin-top: 0;
+  width: 100%;
 }
 
 .ourServices__servicedescripton {
@@ -300,6 +302,11 @@ body {
   line-height: 28px;
   color: #654C4A;
   margin-top: 8px;
+}
+
+.ourServices__servicedescripton--infoContainer {
+  color: #FFC5C1;
+  margin-top: 110px;
 }
 
 .ourServices__readMoreButton {
@@ -326,8 +333,81 @@ body {
   }
 }
 
+.ourServices__callButton {
+  background-color: #FFC5C1;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.ourServices__callNumber {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  color: #012C23;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: none;
+  padding: 12px 40px;
+}
+
+.aboutMe {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .aboutMe__img {
+  -ms-flex-preferred-size: 28.4%;
+      flex-basis: 28.4%;
   margin-top: 80px;
+  margin-left: 66px;
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  .aboutMe__img {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .aboutMe__flexboxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .aboutMe__header {
@@ -337,6 +417,25 @@ body {
   font-size: 120px;
   line-height: 120px;
   color: #FFC5C1;
+  margin-top: 192px;
+  max-width: 600px;
+  position: absolute;
+  top: 220px;
+  left: 440px;
+  margin: 0;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .aboutMe__header {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 48px;
+    line-height: 46px;
+    text-align: center;
+    margin: 120px 40px 0 40px;
+  }
 }
 
 .aboutMe__paragraph {
@@ -346,6 +445,18 @@ body {
   font-size: 20px;
   line-height: 28px;
   color: #A7C0BB;
+  margin-top: 480px;
+  margin-bottom: 160px;
+  max-width: 480px;
+}
+
+@media (max-width: 640px) {
+  .aboutMe__paragraph {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin: 28px 35px 80px 35px;
+  }
 }
 
 .priceListContact {
@@ -432,6 +543,29 @@ body {
   border-bottom: 0;
 }
 
+.priceListContact__contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 29px;
+}
+
+@media (max-width: 640px) {
+  .priceListContact__contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.priceListContact__contactContainer--changeMargin {
+  margin-top: 49px;
+}
+
 .priceListContact__span {
   font-weight: bold;
 }
@@ -443,21 +577,25 @@ body {
   font-size: 20px;
   line-height: 28px;
   color: #012C23;
-  margin-top: 30px;
 }
 
-.priceListContact__contact {
+.priceListContact__contact, .priceListContact__callNumber {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
   color: #012C23;
-  margin-top: 29px;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-.priceListContact__contact--changeMargin {
-  margin-top: 47px;
+@media (max-width: 640px) {
+  .priceListContact__contact, .priceListContact__callNumber {
+    margin-left: 0;
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
 }
 
 .footer {

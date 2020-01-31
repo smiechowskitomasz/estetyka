@@ -81,16 +81,19 @@
           <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
         </div>
         <div class="ourServices__service ourServices__service--infoContainer">
-          <h3 class="ourServices__servicedescripton ourServices__serviceheader--infoContainer">Masz pytanie dotyczące jakiegoś zabiegu?</h3>
+          <h3 class="ourServices__serviceheader ourServices__serviceheader--infoContainer">Masz pytanie dotyczące jakiegoś zabiegu?</h3>
           <p class="ourServices__servicedescripton ourServices__servicedescripton--infoContainer">Zadzwoń na</p>
-          <button class="ourServices__callButton">242 412 244</button>
+          <button class="ourServices__callButton "><a href="tel:+48798-420-335" class="ourServices__callNumber">+48 798 420 335</a></button>
         </div>
       </main>
       <section class="aboutMe">
-        <img src="img/kamilprusaczykfoto.png" alt="Kamil Prisaczyk Zdjęcie" class="aboutMe__img">
+        <img  src="img/kamilprusaczykfoto.png" alt="Kamil Prisaczyk Zdjęcie" class="aboutMe__img mobile">
+        <div class="aboutMe__flexboxContainer">
         <h2 class="aboutMe__header">Kilka słów o mnie</h2>
         <p class="aboutMe__paragraph">Nazywam się Kamil Prusaczyk. Jestem absolwentem I Wydziału Lekarskiego Warszawskiego Uniwersytetu Medycznego, na tej samej uczelni ukończyłem studia podyplomowe z zakresu Medycyny Estetycznej, a następnie swoje umiejętności doskonaliłem podczas licznych kursów między innymi pod okiem dr. Francesco Vercesi. Obecnie jestem w trakcie specjalizacji z Ortopedii i Traumatologii Narządu Ruchu.
-Wierzę, że by prawidłowo wykonywać zabiegi medycyny estetycznej niezbędna jest staranność i dokładność poparte szeroką wiedzą teoretyczną z zakresu m.in. dermatologii,  fizjologii procesu starzenia oraz anatomii człowieka.</p>
+        Wierzę, że by prawidłowo wykonywać zabiegi medycyny estetycznej niezbędna jest staranność i dokładność poparte szeroką wiedzą teoretyczną z zakresu m.in. dermatologii,  fizjologii procesu starzenia oraz anatomii człowieka.</p>
+      <img  src="img/kamilPrusaczykMobile.png" alt="Kamil Prisaczyk Zdjęcie" class="aboutMe__img desktop">
+      </div>
       </section>
       <article class="priceListContact">
         <div class="priceListContact__wrapper priceListContact__wrapper--priceList">
@@ -107,15 +110,22 @@ Wierzę, że by prawidłowo wykonywać zabiegi medycyny estetycznej niezbędna j
         <div class="priceListContact__wrapper priceListContact__wrapper--kontakt">
             <h2 class="priceListContact__header">Kontakt</h2>
             <!-- <p class="priceListContact__contactParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo.</p> -->
-            <p class="priceListContact__contact priceListContact__contact--changeMargin"><a href="tel:+48690-298-641">+48 798 420 335</a>
-              </p>
+            <div class="priceListContact__contactContainer priceListContact__contactContainer--changeMargin"><img src="icons/phoneIcon.svg"  class="priceListContact__icon" alt="Zadzwoń">
+            <p class="priceListContact__contact priceListContact__contact--changeMargin"><a class="priceListContact__callNumber" href="tel:+48798-420-335">+48 798 420 335</a>
+              </p></div>
+              <div class="priceListContact__contactContainer">
+              <img src="icons/messageIcon.svg" class="priceListContact__icon" alt="Napisz Mail"> 
             <p class="priceListContact__contact">gabinet@kprusaczyk.pl </p>
+          </div>
+          <div class="priceListContact__contactContainer">
+            <img src="icons/placeIcon.svg" class="priceListContact__icon" alt="Przyjdź do nas"> 
             <p class="priceListContact__contact">ul. Kapucyńska 6
                 </br> 18-400 Łomża </p>
+              </div>
         </div>
       </article>
       <footer class="footer">
-        <img class="footer__logo" src="icons/tomoStudioLogo.svg" alt="Logo Tomo Studio">
+        <a href="https://tomostudio.pl/"><img class="footer__logo" src="icons/tomoStudioLogo.svg" alt="Logo Tomo Studio"></a>
         <span class="footer__span">Projekt i realizacja</span>
         <span class="footer__copyrights">Copyrights by Kamil Prusaczyk. All Rights reserved</span>
       </footer>
