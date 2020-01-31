@@ -14,7 +14,7 @@
         <div class="nav__logo">
           <img src="icons/kamilprusaczykLogo.svg" alt="page logo" />
         </div>
-        <ul class="nav__list">
+        <ul class="nav__list mobile">
           <li class="nav__item">Oferta</li>
           <li class="nav__item">O Gabinecie</li>
           <li class="nav__item">Cennik</li>
@@ -23,6 +23,9 @@
             <img src="icons/facebookPinkIcon.svg" alt="facebook logo" />
           </li>
         </ul>
+
+        <div class="nav__hamburgerActive desktop"><img src="icons/hamburgerMenu.svg" alt="options"></div>
+        <div style="display: none" class="nav__hamburger desktop"><img src="icons/closeHamburgerMenu.svg" alt="options"></div>
       </nav>
       <header class="header">
         <h1 class="header__mainHeader">Medycyna </br>estetyczna</h1>
@@ -34,8 +37,7 @@
         <button class="header__contactButton">kontakt</button>
       </header>
       <main class="ourServices">
-      <h2 class="ourServices__header">Nasza </br>
-          oferta</h2>
+      <h2 class="ourServices__header">Nasza oferta</h2>
         <p class="ourServices__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo. Maecenas accumsan, nibh id mattis sodales,</p>
       
         <div class="ourServices__service">
@@ -79,17 +81,17 @@
           <p class="ourServices__servicedescripton">Lorem ipsum dolor sit amet, consectetuśdda Średnieca r adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo. Maecenas accumsan, nibh id mattis sodales</p>
           <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
         </div>
-        <div class="ourServices__service">
-          <h3 class="ourServices__serviceheader">Masz pytanie dotyczące jakiegoś zabiegu?</h3>
-          <p class="ourServices__servicedescripton">Zadzwoń na</p>
+        <div class="ourServices__service ourServices__service--infoContainer">
+          <h3 class="ourServices__servicedescripton ourServices__serviceheader--infoContainer">Masz pytanie dotyczące jakiegoś zabiegu?</h3>
+          <p class="ourServices__servicedescripton ourServices__servicedescripton--infoContainer">Zadzwoń na</p>
           <button class="ourServices__callButton">242 412 244</button>
         </div>
       </main>
-      <section class="aboutMe">
+      <!-- <section class="aboutMe">
         <img src="img/kamilprusaczykfoto.png" alt="Kamil Prisaczyk Zdjęcie" class="aboutMe__img">
         <h2 class="aboutMe__header">Kilka słów o mnie</h2>
         <h2 class="aboutMe__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo. Maecenas accumsan, nibh id mattis sodales,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo. Maecenas accumsan, nibh id mattis sodales,</h2>
-      </section>
+      </section> -->
       <article class="priceListContact">
         <div class="priceListContact__wrapper priceListContact__wrapper--priceList">
           <h2 class="priceListContact__header">Cennik</h2>
@@ -101,7 +103,7 @@
           <p class="priceListContact__paragraph">nibh id mattis sodales<span class="priceListContact__span">20zł</span></p>
           <p class="priceListContact__paragraph">Lorem ipsum dolor sit amet<span class="priceListContact__span">190zł</span></p>
           <p class="priceListContact__paragraph">consectetur adipiscing elit<span class="priceListContact__span">100zł</span></p>
-          <p class="priceListContact__paragraph">Phasellus ut maximus sem<span class="priceListContact__span">10zł</span></p>
+          <p class="priceListContact__paragraph priceListContact__paragraph--noBorder ">Phasellus ut maximus sem<span class="priceListContact__span">10zł</span></p>
         </div>
         <div class="priceListContact__wrapper priceListContact__wrapper--kontakt">
             <h2 class="priceListContact__header">Kontakt</h2>
@@ -114,7 +116,7 @@
         </div>
       </article>
       <footer class="footer">
-        <img src="icons/tomoStudioLogo.svg" alt="Logo Tomo Studio">
+        <img class="footer__logo" src="icons/tomoStudioLogo.svg" alt="Logo Tomo Studio">
         <span class="footer__span">Projekt i realizacja</span>
         <span class="footer__copyrights">Copyrights by Kamil Prusaczyk. All Rights reserved</span>
       </footer>

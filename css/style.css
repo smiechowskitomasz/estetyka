@@ -38,6 +38,18 @@ body {
   margin: 64px 80px 0 80px;
 }
 
+@media (max-width: 640px) {
+  .nav {
+    margin: 32px 32px 0 32px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .nav__logo {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -95,6 +107,13 @@ body {
   margin: 140px auto 0 auto;
 }
 
+@media (max-width: 640px) {
+  .header__mainHeader {
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+
 .header__paragraph {
   width: 42.42%;
   margin: 56px auto 0 auto;
@@ -105,6 +124,15 @@ body {
   line-height: 28px;
   text-align: center;
   color: #A7C0BB;
+}
+
+@media (max-width: 640px) {
+  .header__paragraph {
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+    margin: 56px 24px 0 24px;
+  }
 }
 
 .header__contactButton {
@@ -138,6 +166,18 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 640px) {
+  .ourServices {
+    border-radius: 0;
+    margin: 88px 0 0 0;
+    padding: 80px 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: center;
+            flex-direction: center;
+  }
+}
+
 .ourServices__header {
   font-family: Playfair Display;
   font-style: normal;
@@ -148,6 +188,16 @@ body {
   color: #012C23;
   -ms-flex-preferred-size: 58%;
       flex-basis: 58%;
+}
+
+@media (max-width: 640px) {
+  .ourServices__header {
+    font-size: 48px;
+    line-height: 120px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
 }
 
 .ourServices__paragraph {
@@ -167,6 +217,17 @@ body {
   color: #654C4A;
 }
 
+@media (max-width: 640px) {
+  .ourServices__paragraph {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
 .ourServices__service {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,9 +244,37 @@ body {
   margin-top: 120px;
 }
 
+@media (max-width: 640px) {
+  .ourServices__service {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.ourServices__service--infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #012C23;
+  padding: 40px 24px;
+  border-radius: 16px;
+}
+
 .ourServices__icon {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+  .ourServices__icon {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .ourServices__serviceheader {
@@ -197,6 +286,10 @@ body {
   color: #012C23;
   width: 70%;
   margin-top: 24px;
+}
+
+.ourServices__serviceheader--infoContainer {
+  color: white;
 }
 
 .ourServices__servicedescripton {
@@ -223,6 +316,14 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .ourServices__readMoreButton {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .aboutMe__img {
@@ -256,9 +357,26 @@ body {
       flex-basis: 100%;
 }
 
+@media (max-width: 640px) {
+  .priceListContact {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .priceListContact__wrapper {
   width: 50%;
   padding: 120px 64px;
+}
+
+@media (max-width: 640px) {
+  .priceListContact__wrapper {
+    width: 100%;
+    padding: 120px 24px;
+  }
 }
 
 .priceListContact__wrapper--priceList {
@@ -266,9 +384,23 @@ body {
   border-radius: 16px 0 0 16px;
 }
 
+@media (max-width: 640px) {
+  .priceListContact__wrapper--priceList {
+    font-size: 48px;
+    line-height: 46px;
+    border-radius: 0;
+  }
+}
+
 .priceListContact__wrapper--kontakt {
   background-color: #A7C0BB;
   border-radius: 0 16px 16px 0;
+}
+
+@media (max-width: 640px) {
+  .priceListContact__wrapper--kontakt {
+    border-radius: 0;
+  }
 }
 
 .priceListContact__header {
@@ -293,6 +425,11 @@ body {
   font-size: 20px;
   line-height: 48px;
   color: #012C23;
+  border-bottom: 1px solid #EBACA7;
+}
+
+.priceListContact__paragraph--noBorder {
+  border-bottom: 0;
 }
 
 .priceListContact__span {
@@ -319,7 +456,7 @@ body {
   margin-top: 29px;
 }
 
-.priceListContact__contact:first-child {
+.priceListContact__contact--changeMargin {
   margin-top: 47px;
 }
 
@@ -335,6 +472,28 @@ body {
   margin: 48px 40px 100px 40px;
 }
 
+@media (max-width: 640px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px 30px 57px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 24px auto 16px auto;
+  }
+}
+
 .footer__span {
   font-family: Titillium;
   font-style: normal;
@@ -343,6 +502,15 @@ body {
   line-height: 28px;
   color: #FFC5C1;
   margin-left: 20px;
+}
+
+@media (max-width: 640px) {
+  .footer__span {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-left: 0;
+  }
 }
 
 .footer__copyrights {
@@ -356,5 +524,26 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media (max-width: 640px) {
+  .footer__copyrights {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .desktop {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
