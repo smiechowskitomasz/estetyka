@@ -590,8 +590,12 @@ body {
   margin-left: 20px;
 }
 
+.priceListContact__callNumber {
+  margin: 0;
+}
+
 @media (max-width: 640px) {
-  .priceListContact__contact, .priceListContact__callNumber {
+  .priceListContact__callNumber {
     margin-left: 0;
     margin-top: 12px;
     margin-bottom: 32px;
