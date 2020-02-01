@@ -38,7 +38,7 @@ body {
   margin: 64px 80px 0 80px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .nav {
     margin: 32px 32px 0 32px;
     -webkit-box-pack: justify;
@@ -107,7 +107,7 @@ body {
   margin: 140px auto 0 auto;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .header__mainHeader {
     font-size: 56px;
     line-height: 56px;
@@ -126,7 +126,7 @@ body {
   color: #A7C0BB;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .header__paragraph {
     font-size: 18px;
     line-height: 26px;
@@ -166,7 +166,7 @@ body {
           justify-content: space-between;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices {
     border-radius: 0;
     margin: 88px 0 0 0;
@@ -190,7 +190,7 @@ body {
       flex-basis: 58%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices__header {
     font-size: 48px;
     line-height: 120px;
@@ -217,7 +217,7 @@ body {
   color: #654C4A;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices__paragraph {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -244,7 +244,7 @@ body {
   margin-top: 120px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices__service {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -269,7 +269,7 @@ body {
       align-self: flex-start;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices__icon {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -325,7 +325,7 @@ body {
   margin-top: 24px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .ourServices__readMoreButton {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -364,7 +364,7 @@ body {
   position: relative;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .aboutMe {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -374,40 +374,40 @@ body {
 }
 
 .aboutMe__img {
-  -ms-flex-preferred-size: 28.4%;
-      flex-basis: 28.4%;
+  width: auto;
+  height: auto;
   margin-top: 80px;
   margin-left: 66px;
   z-index: 2;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .aboutMe__img {
     margin: 0 auto;
+    width: auto;
+    height: auto;
   }
 }
 
-@media (min-width: 640px) {
-  .aboutMe__flexboxContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
+.aboutMe__flexboxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .aboutMe__header {
@@ -420,13 +420,13 @@ body {
   margin-top: 192px;
   max-width: 600px;
   position: absolute;
-  top: 220px;
-  left: 440px;
+  top: 200px;
+  left: 405px;
   margin: 0;
   z-index: 1;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .aboutMe__header {
     position: relative;
     top: 0;
@@ -445,12 +445,13 @@ body {
   font-size: 20px;
   line-height: 28px;
   color: #A7C0BB;
-  margin-top: 480px;
-  margin-bottom: 160px;
-  max-width: 480px;
+  margin-top: 440px;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  max-width: 520px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .aboutMe__paragraph {
     font-size: 20px;
     line-height: 28px;
@@ -468,7 +469,7 @@ body {
       flex-basis: 100%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact {
     margin: 0;
     -webkit-box-orient: vertical;
@@ -483,7 +484,7 @@ body {
   padding: 120px 64px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact__wrapper {
     width: 100%;
     padding: 120px 24px;
@@ -495,7 +496,7 @@ body {
   border-radius: 16px 0 0 16px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact__wrapper--priceList {
     font-size: 48px;
     line-height: 46px;
@@ -508,7 +509,7 @@ body {
   border-radius: 0 16px 16px 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact__wrapper--kontakt {
     border-radius: 0;
   }
@@ -521,6 +522,12 @@ body {
   font-size: 80px;
   line-height: 120px;
   color: #012C23;
+}
+
+@media (max-width: 799px) {
+  .priceListContact__header {
+    text-align: center;
+  }
 }
 
 .priceListContact__paragraph {
@@ -550,7 +557,7 @@ body {
   margin-top: 29px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact__contactContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -594,7 +601,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .priceListContact__callNumber {
     margin-left: 0;
     margin-top: 12px;
@@ -614,7 +621,7 @@ body {
   margin: 48px 40px 100px 40px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -627,7 +634,7 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .footer__logo {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -646,7 +653,7 @@ body {
   margin-left: 20px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .footer__span {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -668,7 +675,7 @@ body {
           flex-grow: 1;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .footer__copyrights {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -677,13 +684,13 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 799px) {
   .mobile {
     display: none;
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 799px) {
   .desktop {
     display: none;
   }
