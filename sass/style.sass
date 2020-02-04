@@ -6,6 +6,8 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+  list-style: none
+  text-decoration: none
 
 body
   background-color: $greenColor
@@ -21,35 +23,52 @@ body
   flex-direction: row
   flex-wrap: wrap
 .nav
-  display: flex
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
   padding: 32px 32px 0 32px
+  display: flex
   justify-content: space-between
   align-items: center
   flex-basis: 100%
-  background-color: green
+  // background-color: $greenColor
+  z-index: 4
+  &.addNavBcg
+    background-color: $greenColor
   @media (min-width: 799px)
+    position: relative
     padding: 0
     margin: 64px 80px 0 80px
 
   &__logo
     flex-grow: 1
   &__list
-    display: flex
-    flex-direction: column
-    position: fixed
-    top: 92px
-    left: 0
-    right: 0
+    display: none
     font-family: Playfair Display
     font-style: normal
     font-weight: bold
-    font-size: 24px
-    line-height: 58px
-    text-align: left
     list-style: none
-    background-color: $pinkColor
+
+    &.activeMenu
+      display: flex
+      flex-direction: column
+      position: fixed
+      top: 92px
+      left: 0
+      right: 0
+
+      font-size: 24px
+      line-height: 58px
+      text-align: left
+
+      background-color: $pinkColor
+      overflow-y: scroll
+      height: 100vh
+      z-index: 1
 
     @media ( min-width:  799px)
+      display: flex
       text-align: center
       position: relative
       align-items: center
@@ -83,6 +102,8 @@ body
       line-height: 40px
       font-weight: bold
       border: 0
+  &__submenuItem
+    border-top: 1px solid #EBACA7
   &__item
     margin: 0 20px
     border-bottom: 1px solid $darkPink
@@ -99,6 +120,11 @@ body
           position: absolute
           top: 30
           left: 20px
+  &__link--resetStyle
+    color: black
+
+    @media ( min-width: 799px )
+      color: $pinkColor
   &__ourServiceLink
     order: 1
     @media ( min-width: 799px )
@@ -164,12 +190,11 @@ body
   flex-wrap: wrap
   margin: 140px 40px 0 40px
   padding: 120px 64px
-  justify-content: space-between
+  justify-content: space-around
   @media ( max-width: 799px )
     border-radius: 0
     margin: 88px 0 0 0
     padding: 80px 24px
-    flex-direction: center
 
   &__header
     font-family: Playfair Display
@@ -205,9 +230,11 @@ body
     display: flex
     flex-direction: column
     flex-basis: 21%
+    min-width: 308px
+    flex-wrap: wrap
     align-items: space-evenly
     margin-top: 120px
-    @media ( max-width: 799px )
+    @media ( max-width: 840px )
       flex-basis: 100%
       align-items: center
       text-align: center
@@ -219,7 +246,7 @@ body
 
   &__icon
     align-self: flex-start
-    @media ( max-width: 799px )
+    @media ( max-width: 840px )
       align-self: center
 
   &__serviceheader
@@ -260,8 +287,11 @@ body
     border: 0
     align-self: flex-start
     margin-top: 24px
-    @media ( max-width: 799px )
+    @media ( max-width: 840px )
       align-self: center
+    &:hover
+      color: blue
+      cursor: pointer
   &__callButton
     background-color: $pinkColor
     padding: 12px
@@ -348,27 +378,27 @@ body
   margin: 0 40px
   display: flex
   flex-basis: 100%
-  @media ( max-width: 799px)
+  @media ( max-width: 940px)
     margin: 0
     flex-direction: column
 
   &__wrapper
     width: 50%
     padding: 120px 64px
-    @media ( max-width: 799px)
+    @media ( max-width: 940px)
       width: 100%
       padding: 120px 24px
     &--priceList
       background-color: $pinkColor
       border-radius: 16px 0 0 16px
-      @media ( max-width: 799px)
+      @media ( max-width: 940px)
         font-size: 48px
         line-height: 46px
         border-radius: 0
     &--kontakt
       background-color: $lightGreen
       border-radius: 0 16px 16px 0
-      @media ( max-width: 799px)
+      @media ( max-width: 940px)
         border-radius: 0
   &__header
     font-family: Playfair Display
@@ -377,7 +407,7 @@ body
     font-size: 80px
     line-height: 120px
     color: $greenColor
-    @media ( max-width: 799px)
+    @media ( max-width: 940px)
       text-align: center
   &__paragraph
     display: flex
@@ -394,10 +424,10 @@ body
   &__contactContainer
     display: flex
     margin-top: 29px
-    @media ( max-width: 799px )
-      flex-direction: column
-      align-items: center
-
+    flex-direction: column
+    align-items: center
+    @media ( min-width: 940px )
+      flex-direction: row
     &--changeMargin
       margin-top: 49px
 
@@ -419,7 +449,8 @@ body
     line-height: 40px
     color: #012C23
     text-decoration: none
-    margin-left: 20px
+    @media ( min-width: 940px )
+      margin-left: 20px
   &__callNumber
     margin: 0
 
@@ -438,9 +469,13 @@ body
     align-items: center
     margin: 40px 30px 57px 30px
   &__logo
+    opacity: 0.7
     @media ( max-width: 799px )
       order: 2
       margin: 24px auto 16px auto
+      opacity: 1
+    &:hover
+      opacity: 1
   &__span
     font-family: Titillium
     font-style: normal

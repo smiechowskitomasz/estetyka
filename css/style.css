@@ -5,6 +5,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -31,10 +33,14 @@ body {
 }
 
 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 32px 0 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 32px 32px 0 32px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -43,11 +49,16 @@ body {
           align-items: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background-color: green;
+  z-index: 4;
+}
+
+.nav.addNavBcg {
+  background-color: #012C23;
 }
 
 @media (min-width: 799px) {
   .nav {
+    position: relative;
     padding: 0;
     margin: 64px 80px 0 80px;
   }
@@ -60,6 +71,14 @@ body {
 }
 
 .nav__list {
+  display: none;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  list-style: none;
+}
+
+.nav__list.activeMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,18 +90,20 @@ body {
   top: 92px;
   left: 0;
   right: 0;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: bold;
   font-size: 24px;
   line-height: 58px;
   text-align: left;
-  list-style: none;
   background-color: #FFC5C1;
+  overflow-y: scroll;
+  height: 100vh;
+  z-index: 1;
 }
 
 @media (min-width: 799px) {
   .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     text-align: center;
     position: relative;
     -webkit-box-align: center;
@@ -133,6 +154,10 @@ body {
   }
 }
 
+.nav__submenuItem {
+  border-top: 1px solid #EBACA7;
+}
+
 .nav__item {
   margin: 0 20px;
   border-bottom: 1px solid #EBACA7;
@@ -156,6 +181,16 @@ body {
     position: absolute;
     top: 30;
     left: 20px;
+  }
+}
+
+.nav__link--resetStyle {
+  color: black;
+}
+
+@media (min-width: 799px) {
+  .nav__link--resetStyle {
+    color: #FFC5C1;
   }
 }
 
@@ -264,9 +299,8 @@ body {
       flex-wrap: wrap;
   margin: 140px 40px 0 40px;
   padding: 120px 64px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 799px) {
@@ -274,10 +308,6 @@ body {
     border-radius: 0;
     margin: 88px 0 0 0;
     padding: 80px 24px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: center;
-            flex-direction: center;
   }
 }
 
@@ -341,13 +371,16 @@ body {
           flex-direction: column;
   -ms-flex-preferred-size: 21%;
       flex-basis: 21%;
+  min-width: 308px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: space-evenly;
       -ms-flex-align: space-evenly;
           align-items: space-evenly;
   margin-top: 120px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 840px) {
   .ourServices__service {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -372,7 +405,7 @@ body {
       align-self: flex-start;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 840px) {
   .ourServices__icon {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -428,12 +461,17 @@ body {
   margin-top: 24px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 840px) {
   .ourServices__readMoreButton {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+.ourServices__readMoreButton:hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .ourServices__callButton {
@@ -572,7 +610,7 @@ body {
       flex-basis: 100%;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 940px) {
   .priceListContact {
     margin: 0;
     -webkit-box-orient: vertical;
@@ -587,7 +625,7 @@ body {
   padding: 120px 64px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 940px) {
   .priceListContact__wrapper {
     width: 100%;
     padding: 120px 24px;
@@ -599,7 +637,7 @@ body {
   border-radius: 16px 0 0 16px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 940px) {
   .priceListContact__wrapper--priceList {
     font-size: 48px;
     line-height: 46px;
@@ -612,7 +650,7 @@ body {
   border-radius: 0 16px 16px 0;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 940px) {
   .priceListContact__wrapper--kontakt {
     border-radius: 0;
   }
@@ -627,7 +665,7 @@ body {
   color: #012C23;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 940px) {
   .priceListContact__header {
     text-align: center;
   }
@@ -658,17 +696,21 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 29px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 940px) {
   .priceListContact__contactContainer {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -697,7 +739,12 @@ body {
   line-height: 40px;
   color: #012C23;
   text-decoration: none;
-  margin-left: 20px;
+}
+
+@media (min-width: 940px) {
+  .priceListContact__contact, .priceListContact__callNumber {
+    margin-left: 20px;
+  }
 }
 
 .priceListContact__callNumber {
@@ -737,13 +784,22 @@ body {
   }
 }
 
+.footer__logo {
+  opacity: 0.7;
+}
+
 @media (max-width: 799px) {
   .footer__logo {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 24px auto 16px auto;
+    opacity: 1;
   }
+}
+
+.footer__logo:hover {
+  opacity: 1;
 }
 
 .footer__span {
