@@ -76,6 +76,7 @@ body {
   font-style: normal;
   font-weight: bold;
   list-style: none;
+  background-color: #FFC5C1;
 }
 
 .nav__list.activeMenu {
@@ -90,12 +91,12 @@ body {
   top: 92px;
   left: 0;
   right: 0;
+  padding: 40px 40px 0 40px;
   font-size: 24px;
   line-height: 58px;
   text-align: left;
   background-color: #FFC5C1;
-  overflow-y: scroll;
-  height: 100vh;
+  height: auto;
   z-index: 1;
 }
 
@@ -204,6 +205,7 @@ body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  margin-top: 50px;
 }
 
 @media (min-width: 799px) {
@@ -211,16 +213,23 @@ body {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    margin-top: 0;
   }
 }
 
-.nav__facebookLogo {
+.nav--noMobileMenu {
   display: none;
 }
 
 @media (min-width: 799px) {
-  .nav__facebookLogo {
+  .nav--noMobileMenu {
     display: block;
+  }
+}
+
+@media (min-width: 799px) {
+  .nav--noDesktopMenu {
+    display: none;
   }
 }
 
@@ -239,6 +248,17 @@ body {
       flex-basis: 100%;
 }
 
+@media (min-width: 799px) {
+  .header.header--alignLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .header__mainHeader {
   font-family: Playfair Display;
   font-style: normal;
@@ -247,7 +267,16 @@ body {
   line-height: 100px;
   text-align: center;
   color: #FFC5C1;
-  margin: 140px auto 0 auto;
+  margin: 140px 0 0 0;
+}
+
+@media (min-width: 799px) {
+  .header__mainHeader.header__mainHeader--alignLeft {
+    text-align: left;
+    font-size: 120px;
+    line-height: 120px;
+    margin-left: 100px;
+  }
 }
 
 @media (max-width: 799px) {
@@ -259,7 +288,7 @@ body {
 
 .header__paragraph {
   width: 42.42%;
-  margin: 56px auto 0 auto;
+  margin: 56px auto 24px auto;
   font-family: Titillium;
   font-style: normal;
   font-weight: normal;
@@ -279,9 +308,21 @@ body {
   }
 }
 
+@media (min-width: 799px) {
+  .header__paragraph.header__paragraph--alignLeft {
+    text-align: left;
+    margin: 56px 0 24px 112px;
+  }
+}
+
+.header__contactLink:hover {
+  cursor: pointer;
+  color: blue;
+}
+
 .header__contactButton {
   display: block;
-  margin: 24px auto 24px auto;
+  margin: 0 auto;
   padding: 12px 52px;
   background: #FFC5C1;
   border-radius: 8px;
@@ -293,6 +334,11 @@ body {
   text-align: center;
   color: #012C23;
   text-transform: uppercase;
+}
+
+.header__contactButton:hover {
+  color: #E59F9A;
+  cursor: pointer;
 }
 
 .ourServices {
@@ -325,8 +371,11 @@ body {
   line-height: 120px;
   text-align: left;
   color: #012C23;
+  padding-right: 20px;
+  padding-bottom: 79px;
   -ms-flex-preferred-size: 58%;
       flex-basis: 58%;
+  border-bottom: 1px solid #EBACA7;
 }
 
 @media (max-width: 799px) {
@@ -336,6 +385,9 @@ body {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     text-align: center;
+    padding-bottom: 0;
+    border-bottom: 0;
+    padding-right: 0;
   }
 }
 
@@ -354,6 +406,8 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   color: #654C4A;
+  border-bottom: 1px solid #EBACA7;
+  padding-bottom: 79px;
 }
 
 @media (max-width: 799px) {
@@ -364,6 +418,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 }
 
@@ -377,13 +433,14 @@ body {
           flex-direction: column;
   -ms-flex-preferred-size: 21%;
       flex-basis: 21%;
-  min-width: 308px;
+  min-width: 338px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: space-evenly;
       -ms-flex-align: space-evenly;
           align-items: space-evenly;
   margin-top: 120px;
+  padding: 0 15px;
 }
 
 @media (max-width: 840px) {
@@ -394,6 +451,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    min-width: auto;
+    padding: 0;
   }
 }
 
@@ -464,7 +523,6 @@ body {
   border: 0;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 24px;
 }
 
 @media (max-width: 840px) {
@@ -476,8 +534,12 @@ body {
 }
 
 .ourServices__readMoreButton:hover {
-  color: blue;
+  color: #5B3B39;
   cursor: pointer;
+}
+
+.ourServices__readMoreButton--addMargin {
+  margin-left: 12px;
 }
 
 .ourServices__callButton {
@@ -628,7 +690,7 @@ body {
 
 .priceListContact__wrapper {
   width: 50%;
-  padding: 120px 64px;
+  padding: 120px 64px 70px 64px;
 }
 
 @media (max-width: 940px) {
@@ -695,6 +757,12 @@ body {
 
 .priceListContact__paragraph--noBorder {
   border-bottom: 0;
+}
+
+.priceListContact__paragraph--pFooter {
+  font-size: 14px;
+  margin-top: 50px;
+  font-weight: bold;
 }
 
 .priceListContact__contactContainer {

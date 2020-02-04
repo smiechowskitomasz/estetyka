@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="icons/kamilprusaczykLogo.svg" alt="page logo" />
+        </div>
+        <ul class="nav__list ">
+          <li class="nav__item nav__ourServiceLink">
+            Oferta <img src="icons/downArrow.svg" alt="Dropdown Menu" />
+            <ul class="nav__submenu">
+              <li class="nav__submenuItem">Botox</li>
+              <li class="nav__submenuItem">Kwas hialuronowy</li>
+              <li class="nav__submenuItem">Mezoterapia</li>
+              <li class="nav__submenuItem">Osocze bogatopłytkowe</li>
+              <li class="nav__submenuItem">Leczenie nadpotliwości</li>
+              <li class="nav__submenuItem">Leczenie łysienia</li>
+              <li class="nav__submenuItem">Lipozja iniekcyjna</li>
+            </ul>
+          </li>
+          <li class="nav__item nav--noMobileMenu">
+            <a class="nav__link--resetStyle" href="#aboutUs">O Gabinecie</a>
+          </li>
+          <li class="nav__item nav--noDesktopMenu">
+            <a class="nav__link--resetStyle" href="#aboutUs">Strona główna</a>
+          </li>
+          <li class="nav__item nav--noMobileMenu">
+            <a class="nav__link--resetStyle" href="#prizeList"> Cennik</a>
+          </li>
+          <li class="nav__item" id="contactLink">
+            <a class="nav__link--resetStyle" href="#contact"> Kontakt</a>
+          </li>
+          <li class="nav__item nav--noDesktopMenu" id="aboutMeLink">
+            <a class="nav__link--resetStyle" href="#aboutMe">
+              Kilka słów o mnie</a
+            >
+          </li>
+          <li class="nav__item nav--noMobileMenu">
+            <img src="icons/facebookPinkIcon.svg" alt="facebook logo" />
+          </li>
+        </ul>
+        <div id="hamburger" class="nav__hamburgerActive desktop ">
+          <img src="icons/closeHamburgerMenu.svg" alt="options" />
+        </div>
+        <div style="display: none" class="nav__hamburger desktop">
+          <img src="icons/HamburgerMenu.svg" alt="options" />
+        </div>
+      </nav>
+      <header class="header header--alignLeft">
+        <h1 class="header__mainHeader header__mainHeader--alignLeft">
+          Kwas Hialuronowy
+        </h1>
+        <p class="header__paragraph header__paragraph--alignLeft">
+          Kwas hialuronowy jest podstawowym składnikiem skóry, odpowiedzialnym
+          za utrzymanie prawidłowego nawilżenia i jędrności. Wraz z wiekiem
+          zmniejsza się jego ilość , wskutek czego skóra wysusza się, wiotczeje,
+          pojawiają się zmarszczki, a twarz traci swoją młodzieńczą objętość.
+          Usieciowany kwas hialuronowy możemy używać w celu podkreślenia
+          naturalnych rysów twarzy jak np. linii żuchwy, czy kości policzkowych,
+          a także celem modelowania i nadawania kształtu ustom.
+        </p>
+      </header>
+      <footer class="footer">
+        <a href="https://tomostudio.pl/"
+          ><img
+            class="footer__logo"
+            src="icons/tomoStudioLogo.svg"
+            alt="Logo Tomo Studio"
+        /></a>
+        <span class="footer__span">Projekt i realizacja</span>
+        <span class="footer__copyrights"
+          >Copyrights by Kamil Prusaczyk. All Rights reserved</span
+        >
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -14,8 +14,8 @@
         <div class="nav__logo">
           <img src="icons/kamilprusaczykLogo.svg" alt="page logo" />
         </div>
-        <ul class="nav__list ">
-          <li class="nav__item nav__ourServiceLink">Oferta
+        <ul class="nav__list activeMenu ">
+          <li class="nav__item nav__ourServiceLink">Oferta <img src="icons/downArrow.svg" alt="Dropdown Menu">
           <ul class="nav__submenu">
             <li class="nav__submenuItem">Botox</li>
             <li class="nav__submenuItem">Kwas hialuronowy</li>
@@ -26,10 +26,12 @@
             <li class="nav__submenuItem">Lipozja iniekcyjna</li>
           </ul>
         </li>
-          <li  class="nav__item"><a class="nav__link--resetStyle" href="#aboutUs">O Gabinecie</a> </li>
-          <li class="nav__item"><a class="nav__link--resetStyle" href="#prizeList"> Cennik</a></li>
-          <li class="nav__item"><a class="nav__link--resetStyle" href="#contact"> Kontakt</a></li>
-          <li class="nav__item nav__facebookLogo">
+          <li  class="nav__item nav--noMobileMenu"><a class="nav__link--resetStyle" href="#aboutUs">O Gabinecie</a> </li>
+          <li  class="nav__item nav--noDesktopMenu"><a class="nav__link--resetStyle" href="#aboutUs">Strona główna</a> </li>
+          <li class="nav__item nav--noMobileMenu"><a class="nav__link--resetStyle" href="#prizeList"> Cennik</a></li>
+          <li class="nav__item" id="contactLink"><a class="nav__link--resetStyle" href="#contact"> Kontakt</a></li>
+          <li class="nav__item nav--noDesktopMenu" id="aboutMeLink"><a class="nav__link--resetStyle" href="#aboutMe"> Kilka słów o mnie</a></li>
+          <li class="nav__item nav--noMobileMenu">
             <img src="icons/facebookPinkIcon.svg" alt="facebook logo" />
           </li>
         </ul>
@@ -41,7 +43,7 @@
         <p class="header__paragraph">
             Najnowsze trendy w medycynie estetycznej stawiają nacisk przede wszystkim na dbanie o kondycję skóry i podkreślenie indywidualnych cech pacjenta.  Efekt który chcemy uzyskać, to naturalny i zdrowy wygląd.
         </p>
-        <button class="header__contactButton">kontakt</button>
+        <a href="#contact" class="header__contactLink"><button class="header__contactButton">kontakt</button></a> 
       </header>
       <main id="aboutUs" class="ourServices">
       <h2 class="ourServices__header">Nasza oferta</h2>
@@ -52,42 +54,42 @@
           <img src="icons/faceLogo.svg" class='ourServices__icon' alt="logoFace">
           <h3 class="ourServices__serviceheader">Botox</h3>
           <p class="ourServices__servicedescripton"> Dzięki precyzji i odpowiednio dobranej dawce zlikwiduj zmarszczki, bez utraty naturalnej ekspresji twarzy. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button>
         </div>
         <div class="ourServices__service">
           <img src="icons/faceLogo.svg" class='ourServices__icon' alt="logoFace">
           <h3 class="ourServices__serviceheader">Kwasu hialuronowego</h3>
           <p class="ourServices__servicedescripton">Odzyskaj utraconą objętość i podkreśl naturalne rysy twarzy lub uzyskaj pożądany kształt bez interwencji chirurgicznej. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button>
         </div>
         <div class="ourServices__service">
           <img class='ourServices__icon' src="icons/faceLogo.svg" alt="logoFace">
           <h3 class="ourServices__serviceheader">Mezoterapia </h3>
           <p class="ourServices__servicedescripton">Uzupełniając niedobór kwasu hialuronowego  uzyskaj nawilżenie głębokich warstw skóry, popraw jej kondycję, a drobne bruzdy i zmarszczki staną się mniej widoczne. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button>
         </div>
         <div class="ourServices__service">
           <img src="icons/faceLogo.svg" alt="logoFace" class='ourServices__icon'>
           <h3 class="ourServices__serviceheader">Osocze Bogatopłytkowe PRP</h3>
           <p class="ourServices__servicedescripton">„Wampirzy Lifting” to najbardziej naturalny zabieg w mojej ofercie. Wzmocnij procesy regeneracyjne i kompleksową biostymulacje komórek skóry przy użyciu naturalnych czynników wzrostu znajdujących się w Twojej krwi. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button></div>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button></div>
           
         <div class="ourServices__service">
           <img src="icons/faceLogo.svg" alt="logoFace" class='ourServices__icon'>
           <h3 class="ourServices__serviceheader">Leczenie nadpotliwości </h3>
           <p class="ourServices__servicedescripton">Zapomnij o dyskomforcie z powodu plam na koszuli lub mokrych dłoni. Toksyna botulinowa skutecznie hamuje nadmierną wydzielinę gruczołów potowych. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button>
         </div>
         <div class="ourServices__service">
           <img src="icons/faceLogo.svg" alt="logoFace" class='ourServices__icon'>
           <h3 class="ourServices__serviceheader">Leczenie łysienia</h3>
           <p class="ourServices__servicedescripton">Zatrzymaj proces wypadania włosów i zwiększ ich gęstość. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button></div>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button></div>
         <div class="ourServices__service">
           <img src="icons/faceLogo.svg" alt="logoFace" class='ourServices__icon'>
           <h3 class="ourServices__serviceheader">Lipoliza iniekcyjna</h3>
           <p class="ourServices__servicedescripton">Pozbądź się miejscowego nadmiaru tkanki tłuszczowej. </p>
-          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt=""></button>
+          <button class="ourServices__readMoreButton">Więcej informacji <img src="icons/rightArrow.svg" alt="" class="ourServices__readMoreButton--addMargin"></button>
         </div>
         <div class="ourServices__service ourServices__service--infoContainer">
           <h3 class="ourServices__serviceheader ourServices__serviceheader--infoContainer">Masz pytanie dotyczące jakiegoś zabiegu?</h3>
@@ -95,7 +97,7 @@
           <button class="ourServices__callButton "><a href="tel:+48798-420-335" class="ourServices__callNumber">+48 798 420 335</a></button>
         </div>
       </main>
-      <section class="aboutMe">
+      <section class="aboutMe" id="aboutMe">
         <img  src="img/kamilprusaczykfoto.png" alt="Kamil Prisaczyk Zdjęcie" class="aboutMe__img mobile">
         <div class="aboutMe__flexboxContainer">
         <h2 class="aboutMe__header">Kilka słów o mnie</h2>
@@ -115,6 +117,7 @@
           <p class="priceListContact__paragraph">Lipoliza iniekcyjna<span class="priceListContact__span">od 400zł</span></p>
           <p class="priceListContact__paragraph">Nadpotliwość<span class="priceListContact__span">od 1200zł</span></p>
           <p class="priceListContact__paragraph priceListContact__paragraph--noBorder">Konsultacja<span class="priceListContact__span priceListContact__paragraph--noBorder ">100zł*</span></p>
+          <p class="priceListContact__paragraph priceListContact__paragraph--noBorder priceListContact__paragraph--pFooter"> *wlicza się w cenę zabiegu </p>
         </div>
         <div id="contact" class="priceListContact__wrapper priceListContact__wrapper--kontakt">
             <h2 class="priceListContact__header">Kontakt</h2>
@@ -124,7 +127,7 @@
               </p></div>
               <div class="priceListContact__contactContainer">
               <img src="icons/messageIcon.svg" class="priceListContact__icon" alt="Napisz Mail"> 
-            <p class="priceListContact__contact">gabinet@kprusaczyk.pl </p>
+            <p class="priceListContact__contact"><a class="priceListContact__callNumber" href="mailto:gabinet@kprusaczyk.pl">gabinet@kprusaczyk.pl </a></p>
           </div>
           <div class="priceListContact__contactContainer">
             <img src="icons/placeIcon.svg" class="priceListContact__icon" alt="Przyjdź do nas"> 

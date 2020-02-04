@@ -49,7 +49,7 @@ body
     font-style: normal
     font-weight: bold
     list-style: none
-
+    background-color: $pinkColor
     &.activeMenu
       display: flex
       flex-direction: column
@@ -57,14 +57,13 @@ body
       top: 92px
       left: 0
       right: 0
-
+      padding: 40px 40px 0 40px
       font-size: 24px
       line-height: 58px
       text-align: left
 
       background-color: $pinkColor
-      overflow-y: scroll
-      height: 100vh
+      height: auto
       z-index: 1
 
     @media ( min-width:  799px)
@@ -130,18 +129,28 @@ body
       color: $pinkColor
   &__ourServiceLink
     order: 1
+    margin-top: 50px
     @media ( min-width: 799px )
       order: 0
-  &__facebookLogo
+      margin-top: 0
+  &--noMobileMenu
     display: none
     @media ( min-width: 799px )
       display: block
+  &--noDesktopMenu
+    @media ( min-width: 799px )
+      display: none
 
 .header
   display: flex
   flex-direction: column
   align-items: center
   flex-basis: 100%
+  &.header--alignLeft
+    @media ( min-width: 799px )
+      display: flex
+      align-items: flex-start
+
   &__mainHeader
     font-family: Playfair Display
     font-style: normal
@@ -150,14 +159,20 @@ body
     line-height: 100px
     text-align: center
     color: $pinkColor
-    margin: 140px auto 0 auto
+    margin: 140px 0 0 0
+    &.header__mainHeader--alignLeft
+      @media ( min-width: 799px )
+        text-align: left
+        font-size: 120px
+        line-height: 120px
+        margin-left: 100px
     @media ( max-width: 799px )
       font-size: 56px
       line-height: 56px
 
   &__paragraph
     width: 42.42%
-    margin: 56px auto 0 auto
+    margin: 56px auto 24px auto
     font-family: Titillium
     font-style: normal
     font-weight: normal
@@ -171,10 +186,17 @@ body
       width: 100%
       margin-top: 56px
       padding: 0 24px
+    &.header__paragraph--alignLeft
+      @media ( min-width: 799px )
+        text-align: left
+        margin: 56px 0 24px 112px
+  &__contactLink:hover
+    cursor: pointer
+    color: blue
 
   &__contactButton
     display: block
-    margin: 24px auto 24px auto
+    margin: 0 auto
     padding: 12px 52px
     background: $pinkColor
     border-radius: 8px
@@ -186,6 +208,9 @@ body
     text-align: center
     color: $greenColor
     text-transform: uppercase
+    &:hover
+      color: #E59F9A
+      cursor: pointer
 .ourServices
   background-color: $pinkColor
   border-radius: 8px
@@ -207,13 +232,18 @@ body
     line-height: 120px
     text-align: left
     color: $greenColor
-
+    padding-right: 20px
+    padding-bottom: 79px
     flex-basis: 58%
+    border-bottom: 1px solid #EBACA7
     @media ( max-width: 799px )
       font-size: 48px
       line-height: 120px
       flex-basis: 100%
       text-align: center
+      padding-bottom: 0
+      border-bottom: 0
+      padding-right: 0
   &__paragraph
     flex-basis: 42%
     display: flex
@@ -224,23 +254,30 @@ body
     line-height: 28px
     align-items: flex-end
     color: $grayColor
+    border-bottom: 1px solid #EBACA7
+    padding-bottom: 79px
     @media ( max-width: 799px )
       flex-basis: 100%
       align-items: center
       text-align: center
+      padding-bottom: 0
+      border-bottom: 0
 
   &__service
     display: flex
     flex-direction: column
     flex-basis: 21%
-    min-width: 308px
+    min-width: 338px
     flex-wrap: wrap
     align-items: space-evenly
     margin-top: 120px
+    padding: 0 15px
     @media ( max-width: 840px )
       flex-basis: 100%
       align-items: center
       text-align: center
+      min-width: auto
+      padding: 0
     &--infoContainer
       display: flex
       background: $greenColor
@@ -289,12 +326,13 @@ body
     background: transparent
     border: 0
     align-self: flex-start
-    margin-top: 24px
     @media ( max-width: 840px )
       align-self: center
     &:hover
-      color: blue
+      color: #5B3B39
       cursor: pointer
+    &--addMargin
+      margin-left: 12px
   &__callButton
     background-color: $pinkColor
     padding: 12px
@@ -387,7 +425,7 @@ body
 
   &__wrapper
     width: 50%
-    padding: 120px 64px
+    padding: 120px 64px 70px 64px
     @media ( max-width: 940px)
       width: 100%
       padding: 120px 24px
@@ -424,6 +462,10 @@ body
     border-bottom: 1px solid #EBACA7
     &--noBorder
       border-bottom: 0
+    &--pFooter
+      font-size: 14px
+      margin-top: 50px
+      font-weight: bold
   &__contactContainer
     display: flex
     margin-top: 29px
