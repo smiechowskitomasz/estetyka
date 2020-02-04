@@ -10,22 +10,31 @@
   </head>
   <body>
     <div class="wrapper">
-      <nav class="nav">
+      <nav class="nav activeMenu">
         <div class="nav__logo">
           <img src="icons/kamilprusaczykLogo.svg" alt="page logo" />
         </div>
-        <ul class="nav__list mobile">
-          <li class="nav__item">Oferta</li>
-          <li class="nav__item">O Gabinecie</li>
-          <li class="nav__item">Cennik</li>
-          <li class="nav__item">Kontakt</li>
-          <li class="nav__item">
+        <ul class="nav__list ">
+          <li class="nav__item nav__ourServiceLink">Oferta
+          <ul class="nav__submenu">
+            <li class="nav__submenuItem">Botox</li>
+            <li class="nav__submenuItem">Kwas hialuronowy</li>
+            <li class="nav__submenuItem">Mezoterapia</li>
+            <li class="nav__submenuItem">Osocze bogatopłytkowe</li>
+            <li class="nav__submenuItem">Leczenie nadpotliwości</li>
+            <li class="nav__submenuItem">Leczenie łysienia</li>
+            <li class="nav__submenuItem">Lipozja iniekcyjna</li>
+          </ul>
+        </li>
+          <li  class="nav__item"><a href="#aboutUs">O Gabinecie</a> </li>
+          <li class="nav__item"><a href="#prizeList"> Cennik</a></li>
+          <li class="nav__item"><a href="#contact"> Kontakt</a></li>
+          <li class="nav__item nav__facebookLogo">
             <img src="icons/facebookPinkIcon.svg" alt="facebook logo" />
           </li>
         </ul>
-
-        <div class="nav__hamburgerActive desktop"><img src="icons/hamburgerMenu.svg" alt="options"></div>
-        <div style="display: none" class="nav__hamburger desktop"><img src="icons/closeHamburgerMenu.svg" alt="options"></div>
+        <div id='hamburger' class="nav__hamburgerActive desktop "><img src="icons/closehamburgerMenu.svg" alt="options"></div>
+        <div style="display: none" class="nav__hamburger desktop"><img src="icons/HamburgerMenu.svg" alt="options"></div>
       </nav>
       <header class="header">
         <h1 class="header__mainHeader">Medycyna </br>estetyczna</h1>
@@ -34,7 +43,7 @@
         </p>
         <button class="header__contactButton">kontakt</button>
       </header>
-      <main class="ourServices">
+      <main id="aboutUs" class="ourServices">
       <h2 class="ourServices__header">Nasza oferta</h2>
         <p class="ourServices__paragraph">Możesz być spokojna o swoje bezpieczeństwo, wszystkie zabiegi przeprowadzane są przez dyplomowanego lekarza medycyny estetycznej. Używamy tylko renomowanych produktów, polecanych przez najlepszych specjalistów. 
             Stawiamy na stały kontakt z pacjentem – zadzwoń do nas w przypadku jakichkolwiek wątpliwości, zarówno przed, jak i po zabiegu  </p>
@@ -96,7 +105,7 @@
       </div>
       </section>
       <article class="priceListContact">
-        <div class="priceListContact__wrapper priceListContact__wrapper--priceList">
+        <div id="prizeList" class="priceListContact__wrapper priceListContact__wrapper--priceList">
           <h2 class="priceListContact__header">Cennik</h2>
           <p class="priceListContact__paragraph">Botulina 1 okolica <span class="priceListContact__span">400zł</span></p>
           <p class="priceListContact__paragraph">Botulina 3 okolice<span class="priceListContact__span">1000zł</span></p>
@@ -107,7 +116,7 @@
           <p class="priceListContact__paragraph">Nadpotliwość<span class="priceListContact__span">od 1200zł</span></p>
           <p class="priceListContact__paragraph priceListContact__paragraph--noBorder">Konsultacja<span class="priceListContact__span priceListContact__paragraph--noBorder ">100zł*</span></p>
         </div>
-        <div class="priceListContact__wrapper priceListContact__wrapper--kontakt">
+        <div id="contact" class="priceListContact__wrapper priceListContact__wrapper--kontakt">
             <h2 class="priceListContact__header">Kontakt</h2>
             <!-- <p class="priceListContact__contactParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut maximus sem. Morbi maximus semper commodo.</p> -->
             <div class="priceListContact__contactContainer priceListContact__contactContainer--changeMargin"><img src="icons/phoneIcon.svg"  class="priceListContact__icon" alt="Zadzwoń">
@@ -130,5 +139,6 @@
         <span class="footer__copyrights">Copyrights by Kamil Prusaczyk. All Rights reserved</span>
       </footer>
     </div>
+    <script src="/js/main.js"></script>
   </body>
 </html>

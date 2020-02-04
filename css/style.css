@@ -15,6 +15,7 @@ body {
   background-image: url("../img/backgroundWoman.png");
   background-repeat: no-repeat;
   background-position: top right;
+  position: relative;
 }
 
 .wrapper {
@@ -33,20 +34,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 32px 32px 0 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin: 64px 80px 0 80px;
+  background-color: green;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 799px) {
   .nav {
-    margin: 32px 32px 0 32px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 0;
+    margin: 64px 80px 0 80px;
   }
 }
 
@@ -60,25 +63,124 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 92px;
+  left: 0;
+  right: 0;
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  color: #FFC5C1;
+  font-size: 24px;
+  line-height: 58px;
+  text-align: left;
+  list-style: none;
+  background-color: #FFC5C1;
+}
+
+@media (min-width: 799px) {
+  .nav__list {
+    text-align: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    color: #FFC5C1;
+    position: relative;
+    top: 0;
+    height: auto;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.nav__submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 58px;
+  color: #000000;
+  background-color: #FFC5C1;
+}
+
+@media (min-width: 799px) {
+  .nav__submenu {
+    display: none;
+    padding: 40px;
+    text-align: left;
+    background-color: #FFC5C1;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+    border: 0;
+  }
 }
 
 .nav__item {
   margin: 0 20px;
+  border-bottom: 1px solid #EBACA7;
 }
 
-.nav__item:hover {
-  border-bottom: 2px solid #FFC5C1;
+@media (min-width: 799px) {
+  .nav__item {
+    border: 0;
+  }
+}
+
+@media (min-width: 799px) {
+  .nav__item:hover {
+    border-bottom: 2px solid #FFC5C1;
+  }
+}
+
+@media (min-width: 799px) {
+  .nav__item:hover .nav__submenu {
+    display: block;
+    position: absolute;
+    top: 30;
+    left: 20px;
+  }
+}
+
+.nav__ourServiceLink {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (min-width: 799px) {
+  .nav__ourServiceLink {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+.nav__facebookLogo {
+  display: none;
+}
+
+@media (min-width: 799px) {
+  .nav__facebookLogo {
+    display: block;
+  }
 }
 
 .header {
@@ -131,7 +233,8 @@ body {
     font-size: 18px;
     line-height: 26px;
     width: 100%;
-    margin: 56px 24px 0 24px;
+    margin-top: 56px;
+    padding: 0 24px;
   }
 }
 
