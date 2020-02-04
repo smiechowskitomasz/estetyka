@@ -158,6 +158,12 @@ body {
   border-top: 1px solid #EBACA7;
 }
 
+@media (min-width: 799px) {
+  .nav__submenuItem {
+    border-top: 0;
+  }
+}
+
 .nav__item {
   margin: 0 20px;
   border-bottom: 1px solid #EBACA7;
