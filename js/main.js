@@ -19,6 +19,14 @@ sr.reveal("#animation", {
   duration: 2000
 });
 
+sr.reveal("#prizeList", {
+  duration: 2000
+});
+
+sr.reveal("#contact", {
+  duration: 2000
+});
+
 $(document).ready(function() {
   $('a[href^="#"]').on("click", function(event) {
     var target = $($(this).attr("href"));
