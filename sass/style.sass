@@ -571,6 +571,14 @@ body
     line-height: 28px
     color: $lightGreen
     margin-top: 24px
+    &--addPadding
+      padding: 0 15px
+  &__rowWrapper
+    display: flex
+    flex-direction: row
+    @media ( max-width: 1024px )
+      flex-direction: column
+
 .procedures
   display: flex
   flex-basis: 100%
@@ -578,20 +586,23 @@ body
   background-color: $pinkColor
   padding: 120px 64px
   border-radius: 16px
-  @media ( max-width: 799px )
+  @media ( max-width: 1024px )
     flex-direction: column
     margin: 92px 10px 0 10px
     padding: 120px 24px
+
   &__column
     display: flex
     flex-direction: column
+    flex-basis: 33%
 
-    @media ( max-width: 799px )
-      flex-basis: 33%
+    @media ( min-width: 1024px )
+
+      flex-direction: column
 
     &--addMargin
       margin: 0 23px
-      @media ( max-width: 799px )
+      @media ( max-width: 1024px )
         margin: 100px 0
 
   &__logo
@@ -618,6 +629,16 @@ body
     border-bottom: 1px solid $darkPink
     &--noBorder
       border: 0
+    &--changeFont
+      border: 0
+      font-size: 14px
+      margin-top: 50px
+      font-weight: bold
+
+  &__spanInBracket
+    display: block
+    font-size: 14px
+    line-height: 28px
   &__icon
     transform: translateY(-5px)
     margin-right: 10px
@@ -629,7 +650,7 @@ body
   flex-basis: 100%
   justify-content: space-around
   border-bottom: 1px solid #335C54
-  @media (max-width: 799px)
+  @media (max-width: 1023px)
     flex-direction: column
     margin: 0 20px
     text-align: center
@@ -640,7 +661,7 @@ body
     font-size: 26px
     line-height: 40px
     color: $pinkColor
-    @media ( max-width: 799px  )
+    @media ( max-width: 1023px  )
       margin-top: 30px
   &__link
     font-family: Titillium
@@ -654,7 +675,7 @@ body
     margin-left: 12px
 
 .mobile
-  @media (max-width: 799px)
+  @media (max-width: 1023px)
     display: none
 .desktop
   @media (min-width: 799px)

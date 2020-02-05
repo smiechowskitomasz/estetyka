@@ -958,6 +958,29 @@ body {
   margin-top: 24px;
 }
 
+.effects__paragraph--addPadding {
+  padding: 0 15px;
+}
+
+.effects__rowWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .effects__rowWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .procedures {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -970,7 +993,7 @@ body {
   border-radius: 16px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1024px) {
   .procedures {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -989,12 +1012,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 1024px) {
   .procedures__column {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1002,7 +1029,7 @@ body {
   margin: 0 23px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1024px) {
   .procedures__column--addMargin {
     margin: 100px 0;
   }
@@ -1038,6 +1065,19 @@ body {
   border: 0;
 }
 
+.procedures__paragrph--changeFont {
+  border: 0;
+  font-size: 14px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.procedures__spanInBracket {
+  display: block;
+  font-size: 14px;
+  line-height: 28px;
+}
+
 .procedures__icon {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
@@ -1061,7 +1101,7 @@ body {
   border-bottom: 1px solid #335C54;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .moreLinks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1081,7 +1121,7 @@ body {
   color: #FFC5C1;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .moreLinks__header {
     margin-top: 30px;
   }
@@ -1102,7 +1142,7 @@ body {
   margin-left: 12px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .mobile {
     display: none;
   }
