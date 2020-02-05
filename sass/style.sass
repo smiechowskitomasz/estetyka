@@ -101,6 +101,8 @@ body
       line-height: 40px
       font-weight: bold
       border: 0
+  &__linkSubmenu
+    color: #000000
   &__submenuItem
     border-top: 1px solid #EBACA7
     @media ( min-width: 799px )
@@ -544,6 +546,113 @@ body
     @media ( max-width: 799px )
       order: 1
       text-align: center
+// PODSTRONY
+.effects
+  margin: 64px 100px 0 100px
+  border-top: 1px solid #335C54
+  @media ( max-width: 799px )
+    margin: 64px 20px 0 20px
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 40px
+    color: $pinkColor
+    margin-top: 64px
+    @media ( max-width: 799px )
+      margin-top: 40px
+
+  &__paragraph
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    color: $lightGreen
+    margin-top: 24px
+.procedures
+  display: flex
+  flex-basis: 100%
+  margin: 92px 40px 0 40px
+  background-color: $pinkColor
+  padding: 120px 64px
+  border-radius: 16px
+  @media ( max-width: 799px )
+    flex-direction: column
+    margin: 92px 10px 0 10px
+    padding: 120px 24px
+  &__column
+    display: flex
+    flex-direction: column
+
+    @media ( max-width: 799px )
+      flex-basis: 33%
+
+    &--addMargin
+      margin: 0 23px
+      @media ( max-width: 799px )
+        margin: 100px 0
+
+  &__logo
+    align-self: flex-start
+    // @media ( max-width: 799px )
+    //   align-self: center
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 40px
+    color: $greenColor
+    margin: 24px 0
+  &__paragrph
+
+    font-family: Titillium
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 28px
+    color: $grayColor
+    padding: 10px 0
+    border-bottom: 1px solid $darkPink
+    &--noBorder
+      border: 0
+  &__icon
+    transform: translateY(-5px)
+    margin-right: 10px
+.moreLinks
+  margin: 0 40px
+  padding: 80px 0
+  display: flex
+  flex-direction: row
+  flex-basis: 100%
+  justify-content: space-around
+  border-bottom: 1px solid #335C54
+  @media (max-width: 799px)
+    flex-direction: column
+    margin: 0 20px
+    text-align: center
+  &__header
+    font-family: Playfair Display
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 40px
+    color: $pinkColor
+    @media ( max-width: 799px  )
+      margin-top: 30px
+  &__link
+    font-family: Titillium
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 28px
+    text-decoration-line: underline
+    color: $lightGreen
+  &__icon
+    margin-left: 12px
+
 .mobile
   @media (max-width: 799px)
     display: none
