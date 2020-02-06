@@ -162,6 +162,7 @@ body
     text-align: center
     color: $pinkColor
     margin: 140px 0 0 0
+    max-width: 60%
     &.header__mainHeader--alignLeft
       @media ( min-width: 799px )
         text-align: left
@@ -169,8 +170,10 @@ body
         line-height: 120px
         margin-left: 100px
     @media ( max-width: 799px )
-      font-size: 56px
+      font-size: 46px
       line-height: 56px
+    @media ( max-width: 799px)
+      max-width: 100%
 
   &__paragraph
     width: 42.42%
@@ -328,6 +331,7 @@ body
     background: transparent
     border: 0
     align-self: flex-start
+    margin-top: 24px
     @media ( max-width: 840px )
       align-self: center
     &:hover
@@ -648,12 +652,17 @@ body
   display: flex
   flex-direction: row
   flex-basis: 100%
-  justify-content: space-around
+  justify-content: space-between
   border-bottom: 1px solid #335C54
   @media (max-width: 1023px)
     flex-direction: column
     margin: 0 20px
     text-align: center
+  &__column
+    display: flex
+    flex-direction: column
+    flex-basis: 30%
+
   &__header
     font-family: Playfair Display
     font-style: normal
