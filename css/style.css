@@ -140,6 +140,8 @@ body {
   line-height: 58px;
   color: #000000;
   background-color: #FFC5C1;
+  -webkit-box-shadow: 0px 0px 40px #00452A;
+          box-shadow: 0px 0px 40px #00452A;
 }
 
 @media (min-width: 799px) {
@@ -159,6 +161,11 @@ body {
   color: #000000;
 }
 
+.nav__linkSubmenu:hover {
+  color: #654C4A;
+  border-bottom: 1px solid red;
+}
+
 .nav__submenuItem {
   border-top: 1px solid #EBACA7;
 }
@@ -167,6 +174,10 @@ body {
   .nav__submenuItem {
     border-top: 0;
   }
+}
+
+.nav__submenuItem:hover {
+  border-bottom: 1px solid #654c4a;
 }
 
 .nav__item {
@@ -345,11 +356,13 @@ body {
   text-align: center;
   color: #012C23;
   text-transform: uppercase;
+  border: 0;
 }
 
 .header__contactButton:hover {
-  color: #E59F9A;
+  background-color: #E59F9A;
   cursor: pointer;
+  border: 0;
 }
 
 .ourServices {
@@ -585,7 +598,7 @@ body {
   position: relative;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .aboutMe {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -602,7 +615,7 @@ body {
   z-index: 2;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .aboutMe__img {
     margin: 0 auto;
     width: auto;
@@ -647,7 +660,7 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .aboutMe__header {
     position: relative;
     top: 0;
@@ -672,7 +685,7 @@ body {
   max-width: 520px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1023px) {
   .aboutMe__paragraph {
     font-size: 20px;
     line-height: 28px;
@@ -1169,7 +1182,7 @@ body {
   }
 }
 
-@media (min-width: 799px) {
+@media (min-width: 1023px) {
   .desktop {
     display: none;
   }

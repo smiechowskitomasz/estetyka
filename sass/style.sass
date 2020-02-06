@@ -91,7 +91,7 @@ body
     line-height: 58px
     color: #000000
     background-color: $pinkColor
-
+    box-shadow: 0px 0px 40px #00452A
     @media( min-width: 799px  )
       display: none
       padding: 40px
@@ -103,10 +103,15 @@ body
       border: 0
   &__linkSubmenu
     color: #000000
+    &:hover
+      color: #654C4A
+      border-bottom: 1px solid red
   &__submenuItem
     border-top: 1px solid #EBACA7
     @media ( min-width: 799px )
       border-top: 0
+    &:hover
+      border-bottom: 1px solid #654c4a
 
   &__item
     margin: 0 20px
@@ -124,6 +129,7 @@ body
           position: absolute
           top: 30
           left: 20px
+
   &__link--resetStyle
     color: black
 
@@ -213,9 +219,11 @@ body
     text-align: center
     color: $greenColor
     text-transform: uppercase
+    border: 0
     &:hover
-      color: #E59F9A
+      background-color: #E59F9A
       cursor: pointer
+      border: 0
 .ourServices
   background-color: $pinkColor
   border-radius: 8px
@@ -361,7 +369,7 @@ body
   display: flex
   justify-content: space-between
   position: relative
-  @media ( max-width: 799px  )
+  @media ( max-width: 1023px  )
     flex-direction: column
   &__img
     width: auto
@@ -369,7 +377,7 @@ body
     margin-top: 80px
     margin-left: 66px
     z-index: 2
-    @media ( max-width: 799px  )
+    @media ( max-width: 1023px  )
       margin: 0 auto
       width: auto
       height: auto
@@ -396,7 +404,7 @@ body
     left: 405px
     margin: 0
     z-index: 1
-    @media ( max-width: 799px  )
+    @media ( max-width: 1023px  )
       position: relative
       top: 0
       left: 0
@@ -416,7 +424,7 @@ body
     margin-bottom: 80px
     margin-right: 20px
     max-width: 520px
-    @media ( max-width: 799px  )
+    @media ( max-width: 1023px  )
       font-size: 20px
       line-height: 28px
       text-align: center
@@ -687,5 +695,5 @@ body
   @media (max-width: 1023px)
     display: none
 .desktop
-  @media (min-width: 799px)
+  @media (min-width: 1023px)
     display: none
